@@ -9,16 +9,17 @@ Dijktra's algorithm is an iterative algorithm that finds the shortest path betwe
 3.	Choose the next node with the shortest distance; repeat the distance computations for adjacent nodes.
 4.	The shortest-path tree's final outcome
 
-1.	INITIALIZE-SINGLE-SOURCE(V, s)
-2.	S ← ∅
-3.	Q ← V[G]
-4.	while Q ≠ ∅
-5.	       do u ← EXTRACT-MIN(Q)
-6.	 	      S ← S ∪ {u}
-7.	 	      for each vertex v ∈ Adj[u]
-8.	 		do RELAX(u, v, w)
-9.	 		Update Q (DECREASE_KEY)
-
+```
+INITIALIZE-SINGLE-SOURCE(V, s)
+	S ← ∅
+	Q ← V[G]
+	while Q ≠ ∅
+		do u ← EXTRACT-MIN(Q)
+		S ← S ∪ {u}
+		for each vertex v ∈ Adj[u]
+			do RELAX(u, v, w)
+			Update Q (DECREASE_KEY)
+```
 
 •	1st line has O(V) time complexity.
 •	2ND line has O (1) time complexity.
@@ -35,6 +36,7 @@ Kruskal’s MST algorithm is the graph whose sum of weights of edges is minimum.
 2.	Choose the smallest edge. Check to see if it forms a cycle with the spanning tree you've already created. Include this edge when a cycle isn't formed. Otherwise, throw it out.
 3.	Repeat the previous step till the spanning tree has V-1 edges.
 
+```
 MST_KRUSKAL(V,E,w)
 	A←∅
 	for each vertex v ∈ V
@@ -45,7 +47,7 @@ MST_KRUSKAL(V,E,w)
 	 	then A ← A ∪ {(u, v)}
 	 	UNION(u, v)
 	return A
-
+```
 
 
 
